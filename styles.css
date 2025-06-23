@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background: linear-gradient(125deg, #EED0F2, #EDC2F2, #E0B6F2, #C2A0F2, #B091F2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header {
+	width:90%;
+	max-width:1000px;
+	margin:auto;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+	background:#efc688;
+	position: relative;
+    border-left: 1px solid black;
+    margin-bottom: 40px;
+    border-bottom: #000;
+}
+
+nav ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+
+nav > ul > li {
+	float:left;
+    border-right: 1px solid black;
+}
+
+
+
+nav ul li a {
+	text-decoration:none;
+	color:#000;
+	display:block;
+	padding:10px 20px;
+    position: relative;
+}
+nav ul li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #efc688;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+    color:#efc688;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+	background:#D2DAFF;
+}
+
+nav > ul > li:hover div {
+	display:table;
+    position:absolute;
+    z-index: 5;
+}
+nav ul li div {
+	width:1000px;
+	position: absolute;
+	left:0;
+	background:#EAE0C8;
+	box-sizing:border-box;
+	display:none;
+}
+
+nav ul li div ul{
+	width:20%;
+	display:table-cell;
+	box-sizing:border-box;
+    border-right: 1px solid rgba(0,0,0,0.5);
+    margin:0;
+}
+
+nav ul li div ul:last-child {
+	border:none;
+}
+
+nav ul li div ul .titulo {
+	background:#EED0F2;
+	color:black;
+}
+
+nav ul li div ul .titulo a {
+	color:black;
+	padding:10px 20px;
+}
+
+.titulo.azul {background:#EDC2F2;}
+.titulo.verde{background:#E7b9f2;}
+.titulo.naranja {background:  #d4aaf2;}
+.titulo.rojo {background: #E0B6F2; color:#000;}
+
+nav ul li div ul .titulo a:hover {
+	background:none;
+}
+
+nav ul li div ul li a {
+	color:#000;
+}
+
+nav ul li div ul li a:hover {
+	color:black;
+}
+nav > ul > li:hover ~ .texto {
+    display: none;
+}
+footer{
+    box-sizing: border-box;
+    position: relative;
+    height: 175px;
+    background-color: #efc688;
+    gap: 1rem;
+}
+footer img{
+    margin-top: 10px;
+    width: 30%;
+    height: 120px;
+    position: relative;
+    right: 400px;
+    top: 0;
+    right: 0;
+    place-items: center;
+}
+.footerInfo{
+    position: relative;
+    left: 0;
+    bottom: 150px;
+    width: 100%;
+    height: 120px;
+    text-align: right;
+    font-size: 20px;
+    padding-top: 40px;
+}
+.footerInfo p{
+    margin-right: 30px;
+    color: #000;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+body{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto
+}
+#copy{
+    position: relative;
+    left: 0;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+    bottom: 100px;
+    margin-bottom: 10px;
+}
+.Bienvenida{
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom:20px;
+    background-color: #d3e1ff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+.imagenes{
+    text-align:center;
+}
+.imagen{
+    position: relative;
+    width: 190px;
+    height: 190px;
+    max-width: 600px;
+    display: inline-block;
+    vertical-align:top;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px black;
+    bottom:100px;
+    margin: 15px;
+}
+.imagen:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+form{
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    place-items: left;
+    width: 450px;
+    display:flex;
+    flex-direction:column;
+    margin-bottom: 125px;
+    margin-top: 60px;
+}
+input::placeholder{
+    transition: all 0.5s ease;
+    font-size: 16px;
+}
+form input{
+    position: relative;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 2px solid #999;
+    background-color: transparent;
+    padding: 10px 10px;
+    transition: all 1s ease;
+    background-color: transparent;
+}
+form h2{
+    position: relative;
+    text-align: center;
+}
+input:hover{
+    transition: all 0.4s ease;
+    border-color: #efc688;
+    color: #efc688;
+}
+input:hover::placeholder{
+    transition: all 0.4s ease;
+    color: #6c63ff;
+}
+input[type="submit"]{
+    position: relative;
+    color: black;
+    background-color: #bbd1ff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-direction: column;
+    top:20px;
+    margin-bottom:20px;
+}
+.integrantes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+.integrante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    min-width: 320px;
+    max-width: 480px;
+    margin: 16px 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    min-height: 180px;
+    padding: 24px 20px;
+    border: 2px solid #bbd1ff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: none;
+}
+
+
+.integrante:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(108,99,255,0.15);
+}
+.descripcion{
+    position: relative;
+    margin-bottom: auto;
+    text-align: center;
+}
+.nosotros{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.Contacto{
+    position: relative;
+    text-align: center;
+    margin:auto;
+    font-size: 40px;
+    color: #6c63ff;
+}
+.texto{
+    position: relative;
+    font-size: 30px;
+    color: #6c63ff;
+    text-align: center;
+    background-attachment: fixed;
+}
+.texto2{
+    position: relative;
+    font-size: 26px;
+    color: #6c63ff;
+    text-align: center;
+    background-attachment: fixed;
+}
+.emprendimientosH2{
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+.nosotros + p{
+    position: relative;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1, h2 {
+    font-family: 'Edu NSW ACT Hand Pre', cursive;
+    color: #6c63ff;
+}
+.saber{
+    text-align: center;
+    font-size: 32px;
+}
+.emprender{
+    text-align: center;
+    font-size: 40px;
+}
+.OtrosConsejos{
+    text-align: center;
+    font-size: 24px;
+}
+.consejos{
+    text-align: center;
+    font-size: 22px;
+}
+.palabras{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.info{
+    text-align: center;
+    font-size: 36px;
+}
+.nombre{
+    text-align: center;
+    font-size: 32px;
+}
+.listOtros{
+    text-align: center;
+    list-style:none;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+.intP{
+    position: relative;
+    font-size: 26px;
+    color: #6c63ff;
+    text-align: left;
+    background-attachment: fixed;
+    margin-bottom: 10px;
+}
